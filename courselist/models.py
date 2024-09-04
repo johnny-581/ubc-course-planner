@@ -18,9 +18,11 @@ class Course(models.Model):
     subject = models.CharField(max_length=10)
     number = models.IntegerField()
     full_course_name = models.CharField(max_length=100, null=True, blank=True)
+    credits = models.IntegerField(default=3)
     terms_offered = models.ManyToManyField(Term, help_text='Select the terms in which the course is offered.')
 
     def __str__(self):
         return f'{self.subject} {self.number}'
+    
     class Meta:
         unique_together = ('subject', 'number')
