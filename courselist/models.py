@@ -35,5 +35,8 @@ class UserCourse(models.Model):
     order = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return f'{self.user} - {self.course} ({self.order})'
+
     class Meta:
-        unique_together = ('user', 'course')
+        unique_together = [('user', 'course'), ('user', 'order')]

@@ -1,0 +1,15 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>My Courses</h2>
+
+<ul>
+    {% for user_course in user_courses %}
+    <li>{{ user_course.course }} ({{ user_course.course.credits }} credits)</li>
+    {% empty %}
+    <li>No courses found.</li>
+    {% endfor %}
+</ul>
+
+<p>Total Credits: {{ user_total_credits }}</p>
+{% endblock %}
