@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'courseplanner.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'course_planner',
+        'USER': 'jiayang',
+        'PASSWORD': 'R0ckSt4r',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

@@ -17,7 +17,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-2">
-                <strong>UBC Course Planner</strong>
+                <strong><a href="{% url 'index' %}" class="text-reset text-decoration-none">UBC Course
+                        Planner</a></strong>
                 {% block sidebar %}
                 <ul class="sidebar-nav">
                     {% if user.is_authenticated %}
